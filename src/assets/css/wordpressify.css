@@ -1,0 +1,55 @@
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* header */
+.header {
+    background-color: black;
+    height: 50px;
+}
+.header .container {
+    display: flex;
+    align-items: center;
+}
+
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.post-list > .item:first-child {
+    grid-column-end: span 2;
+}
+.post-list > .item:first-child .post-title {
+    font-size: 1.75rem;
+}
+
+.post-thumbnail {
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.single-thumbnail img {
+    object-fit: cover;
+}
+
+.ratio-16-by-9 {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+}
+
+.ratio-16-by-9 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}

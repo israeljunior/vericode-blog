@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply font-normal text-gray-600;
+}
+
+.container {
+    @apply mx-auto px-sm;
+    max-width: 1040px;
+}
+@screen lg {
+    .postlist > .item:first-child {
+        grid-column-end: span 2;
+    }
+    .postlist > .item:first-child h2 {
+        @apply text-2xl leading-tight;
+    }
+    .postlist > .item:first-child p {
+        @apply text-lg;
+    }
+}
+
+.ratio-16-by-9 {
+    display: block;
+    position: relative;
+    padding-top: 47.17%;
+}
+.ratio-16-by-9 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.article p {
+    @apply font-normal mb-xs leading-normal text-gray-600;
+}
+
+.article h2 {
+    @apply text-2xl font-bold mt-md text-primary leading-loose;
+}
+
+.article h3 {
+    @apply mt-md text-lg text-black font-bold leading-loose;
+}
+
+.article strong {
+    @apply text-black;
+}
+
+.article img {
+    @apply rounded my-sm;
+}
+
+.article img + em {
+    @apply -mt-xs mb-md block text-xs not-italic text-center;
+}
+
+.article ul {
+    @apply list-outside list-disc pl-sm;
+}
+
+.article li + li {
+    @apply mt-xs;
+}
+
+/* archive */
+.archive .postlist > .item:first-child {
+    grid-column-end: span 1;
+}
+
+/* image */
+.image { }
+.image--tint { @apply relative; }
+.image--tint::before {
+    @apply absolute top-0 left-0 w-full h-full opacity-75 bg-secondary z-50;
+    mix-blend-mode: color;
+    content: "";
+}
